@@ -5,16 +5,18 @@ const path = require ('path');
 
 const { mongoose } = require('./database');
 
+///---------MIDDLEWARES--------------
+
+app.use(morgan('dev'));
+app.use (express.json());
+
 
 //----------SETTINGS-----------------
 
 app.set('port', process.env.PORT || 3000);
 app.use(express.static(path.join(__dirname, 'public')));
 
-///---------MIDDLEWARES--------------
 
-app.use(morgan('dev'));
-app.use (express.json());
 
 //----------ROUTES-----------------
 

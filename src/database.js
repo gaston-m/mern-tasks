@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 
 
-const URI = 'mongodb://127.0.0.1/mern-tasks';
+const URI = 'mongodb://127.0.0.1:27017/mern-tasks';
 
 mongoose.connect(URI, {
 
